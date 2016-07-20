@@ -1,3 +1,9 @@
 test50=# CREATE TABLE sampletest (id varchar(255), price int, product_date timestamp, postal varchar(255), property_type varchar(255), new varchar(255), duration varchar(255), paon varchar(255), saon varchar(255), street varchar(255), locality varchar(255), city varchar(255), district varchar(255), county varchar(255), category varchar(255), recordstatus varchar(255));
 
-test50=# COPY sampletest FROM '~/pr/pp-1999.csv' DELIMITER ',' CSV;
+test50=# COPY sampletest FROM '/data/q/pr/pp-1999.csv' DELIMITER ',' CSV;
+
+-----
+
+$psql -h localhost -U postgres
+
+\c test50;
