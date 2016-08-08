@@ -1,0 +1,7 @@
+Matches .java files
+-i edits the file directly .. you can also use -i.bak if you need backup
+-e to execute multiple sed's
+to delete lines between two matching patterns(including  thematching lines) -e '/<<<<<<< HEAD/,/=======/d'
+delete lines with matching patterns />>>>>>> upstream\/master/
+
+find . -type f -name "*.java" -exec sed -i.bak -e '/<<<<<<< HEAD/,/=======/d' -e '/>>>>>>> upstream\/master/d' {} +
